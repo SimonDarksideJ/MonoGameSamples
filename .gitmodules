@@ -1,0 +1,6 @@
+[submodule "GameStateManagementSample"]
+	path = GameStateManagementSample
+	url = https://github.com/SimonDarksideJ/GameStateManagementSample.git
+[submodule "XMLContentLoading"]
+	path = XMLContentLoading
+	url = https://github.com/SimonDarksideJ/XMLContentLoading.git
