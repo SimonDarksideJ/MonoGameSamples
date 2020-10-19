@@ -4,3 +4,6 @@
 [submodule "XMLContentLoading"]
 	path = XMLContentLoading
 	url = https://github.com/SimonDarksideJ/XMLContentLoading.git
+[submodule "SkinnedModel_MonoGame"]
+	path = SkinnedModel_MonoGame
+	url = https://github.com/SimonDarksideJ/SkinnedModel_MonoGame
