@@ -7,3 +7,6 @@
 [submodule "SkinnedModel_MonoGame"]
 	path = SkinnedModel_MonoGame
 	url = https://github.com/SimonDarksideJ/SkinnedModel_MonoGame
+[submodule "Audio3DSample"]
+	path = Audio3DSample
+	url = https://github.com/xna-to-monogame/Audio3DSample.git
