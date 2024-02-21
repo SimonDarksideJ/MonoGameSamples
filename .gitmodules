@@ -7,3 +7,6 @@
 [submodule "SkinnedModel_MonoGame"]
 	path = SkinnedModel_MonoGame
 	url = https://github.com/SimonDarksideJ/SkinnedModel_MonoGame
+[submodule "AimingSample"]
+	path = AimingSample
+	url = https://github.com/xna-to-monogame/AimingSample.git
