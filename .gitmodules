@@ -10,3 +10,6 @@
 [submodule "Audio3DSample"]
 	path = Audio3DSample
 	url = https://github.com/xna-to-monogame/Audio3DSample.git
+[submodule "AimingSample"]
+	path = AimingSample
+	url = https://github.com/xna-to-monogame/AimingSample.git
