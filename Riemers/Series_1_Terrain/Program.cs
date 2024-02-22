@@ -1,14 +1,2 @@
-﻿using System;
-
-namespace Series3D1
-{
-    public static class Program
-    {
-        [STAThread]
-        static void Main()
-        {
-            using (var game = new Game1())
-                game.Run();
-        }
-    }
-}
+﻿using var game = new Series3D1.Game1();
+game.Run();
