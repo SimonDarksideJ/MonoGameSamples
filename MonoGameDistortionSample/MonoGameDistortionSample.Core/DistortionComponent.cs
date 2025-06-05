@@ -132,7 +132,7 @@ namespace MonoGameDistortionSample.Core
                 GraphicsDevice.SetRenderTarget(sceneMap);
             }
         }
-        
+
         /// <summary>
         /// Grab a scene that has already been rendered, 
         /// and add a distortion effect over the top of it.
@@ -156,11 +156,11 @@ namespace MonoGameDistortionSample.Core
 
                 foreach (ModelMesh mesh in Distorter.Model.Meshes)
                 {
-                    Matrix meshWorldView = transforms[mesh.ParentBone.Index] * 
-                        worldView;                    
+                    Matrix meshWorldView = transforms[mesh.ParentBone.Index] *
+                        worldView;
                     foreach (Effect effect in mesh.Effects)
-                    {                        
-                        effect.CurrentTechnique = 
+                    {
+                        effect.CurrentTechnique =
                             effect.Techniques[Distorter.Technique.ToString()];
                         effect.Parameters["WorldView"].SetValue(meshWorldView);
                         effect.Parameters["WorldViewProjection"].SetValue(
@@ -182,7 +182,8 @@ namespace MonoGameDistortionSample.Core
                 GraphicsDevice.SetRenderTarget(null);
 
                 // draw the scene image again, distorting it with the distortion map
-                GraphicsDevice.Textures[1] = distortionMap;
+                distortEffect.Parameters["Texture"].SetValue(sceneMap);
+                distortEffect.Parameters["Displacement"].SetValue(distortionMap);
                 GraphicsDevice.SamplerStates[1] = SamplerState.PointClamp;
                 Viewport viewport = GraphicsDevice.Viewport;
                 distortEffect.CurrentTechnique = Distorter.DistortionBlur ?
@@ -190,7 +191,7 @@ namespace MonoGameDistortionSample.Core
                 DrawFullscreenQuad(sceneMap, viewport.Width, viewport.Height,
                     distortEffect);
             }
-        } 
+        }
 
         /// <summary>
         /// Helper for drawing a texture into the current rendertarget,
